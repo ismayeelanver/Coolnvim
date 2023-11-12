@@ -1,5 +1,6 @@
 # my-lazy-nvim-starter-template
 
+# install
 ```
-hello
+git clone https://github.com/ismayeelanver/my-lazy-nvim-starter-template.git ~/.config/nvim/
 ```
