@@ -1,6 +1,6 @@
 ## 😎 cool_nvim
-powered by lua 
-thank you lua!
+powered by *lua,*
+thank you *lua!*
 ![image](https://raw.githubusercontent.com/ismayeelanver/cool_nvim/main/Screenshot%20from%202023-11-13%2013-52-20.png)
 
 ## ⚡️ Requirements
