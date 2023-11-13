@@ -23,5 +23,15 @@ git clone https://github.com/ismayeelanver/cool_nvim.git ~/.config/nvim/
 - you don't have to worry about anything if you've installed it.
 - it takes only one command to install it:
 ```
-sudo apt update & sudo apt install git & sudo apt install neovim & git clone https://github.com/ismayeelanver/cool_nvim.git ~/.config/nvim/
+sudo apt update & sudo apt install git & sudo apt install neovim & git clone https://github.com/ismayeelanver/cool_nvim.git ~/.config/nvim/ & nvim
 ```
+
+## ❌ Uninstalling
+
+- Warning: Uninstalling this will remove all the configurations so do it at your own risk, if you want to remove it please follow the steps below:
+```
+rm -rf ~/.config/nvim/*
+```
+
+
+
