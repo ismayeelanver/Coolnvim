@@ -1,2 +1,2 @@
---bootstarp lazy.nvim
+--bootstarp cool_nvim
 require("config.lazy")
