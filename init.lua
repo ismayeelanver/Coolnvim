@@ -1,2 +1,3 @@
---bootstarp cool_nvim
-require("config.lazy")
+require("config.init")
+require("keymap.key")
+vim.cmd('set number')
