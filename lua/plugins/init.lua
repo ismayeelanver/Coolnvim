@@ -4,7 +4,7 @@ return {
   {
 	  "folke/which-key.nvim",
   },
-  { 
+  {
 	  "folke/neoconf.nvim",
 	  cmd = "Neoconf",
   },
@@ -13,55 +13,39 @@ return {
   },
   -- lsp config, nvim cmp
   {
-	"neovim/nvim-lspconfig",
-	lazy = false,
-	config = function()
-  	end,
-	opts = {
-		ensure_install = {
-			"python", "html",
-			"bash", "css",
-		},
-	},
-
-  },
-  {
-	  "hrsh7th/cmp-nvim-lsp",
-	  opts = {
-		  ensure_install = {
-			  "pyright"
-		  },
-	  },
-  },
-  {
- 	  "hrsh7th/cmp-buffer",
-  },
-  {
-	  "hrsh7th/cmp-path",
+	  "neovim/nvim-lspconfig",
   },
   {
 	  "hrsh7th/nvim-cmp",
+	  config = function()
+		  return require("config.cmp_config")
+  	  end
   },
-  -- mason nvim
   {
-  	"williamboman/mason.nvim",
-	cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-	opts = {
-		ensured_install = {
-			"lua-language-server", "pyright",
-		},
-	},
+	  "hrsh7th/cmp-nvim-lsp",
+  },
+  -- and snippet
+  {
+  	"williamboman/mason-lspconfig.nvim",
+	config = function()
+		return require("config.lsp_config")
+	end
+  },
+  {
+	"williamboman/mason.nvim",
+  },
+  -- completion ie snippet
+  {
+  	"L3MON4D3/LuaSnip",
+	"rafamadriz/friendly-snippets",
+	"saadparwaiz1/cmp_luasnip",
   },
   --treesitter
  {
 	 "nvim-treesitter/nvim-treesitter",
-	 opts = {
-		 ensure_installed = { 
-			 "lua", "vim",
-			 "vimdoc", "pymanifest",
-			 "python", "bash"
-		 },
-	 },
+	 config = function()
+		 return require("config.treesitter")
+	 end
  },
  -- telescope
  {
@@ -69,11 +53,9 @@ return {
  },
  {
 	 "nvim-tree/nvim-tree.lua",
-	 lazy = false,
 	 config = function()
-	 	require("nvim-tree").setup({
-		})
-	end,
+		 return require("config.nvim_tree")
+	 end
  },
  {
 	 "catppuccin/nvim",
@@ -84,9 +66,26 @@ return {
 	 end
  },
  {
-	 "vim-airline/vim-airline",
+	 "nvim-lualine/lualine.nvim",
+	  dependencies = { 'nvim-tree/nvim-web-devicons' },
 	 config = function()
-		 vim.cmd('AirlineTheme catppuccin')
-	 end
+			return require("config.lualine")
+	end,
+ },
+ {
+	 "Exafunction/codeium.nvim",
+	 dependencies = {
+        "nvim-lua/plenary.nvim",
+        "hrsh7th/nvim-cmp",
+    	 },
+	 config = function()
+        	require("codeium").setup({
+        	})
+    	end
+ },
+ {
+	 "onsails/lspkind.nvim",
+ },
+ {
  },
 }
