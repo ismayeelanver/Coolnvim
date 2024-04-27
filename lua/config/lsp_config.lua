@@ -1,9 +1,5 @@
 require("mason").setup({})
 require("mason-lspconfig").setup({
-  ensured_install = {
-	"lua_ls", "pyright",
-	"vimls",
-  },
 })
 local on_attach	= function(_, _)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
