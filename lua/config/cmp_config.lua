@@ -17,6 +17,7 @@ cmp.setup({
       { name = 'nvim_lsp' },
       { name = 'luasnip' },
       { name = 'buffer' },
+      { name = 'codeium' },
       }),
       formatting = {
         format = require('lspkind').cmp_format({
