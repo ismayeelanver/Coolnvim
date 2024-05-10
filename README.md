@@ -1,4 +1,5 @@
 ## 😎 Cool_nvim
+img[https://raw.githubusercontent.com/ismayeelanver/Coolnvim/main/Screenshot.png]
 powered by *lua,*
 thank you *lua!*
 ## Updates for today
